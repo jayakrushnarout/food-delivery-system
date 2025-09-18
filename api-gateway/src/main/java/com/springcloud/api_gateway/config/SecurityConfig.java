@@ -33,6 +33,7 @@ public class SecurityConfig {
                 .csrf(csrf -> csrf.disable())
                 .authorizeExchange(auth -> auth
                         .pathMatchers("/auth/**").permitAll()  // login/signup open
+                        .pathMatchers("/actuator/**").permitAll()
                         .pathMatchers("/orders/**").hasAnyRole("CUSTOMER", "ADMIN") // Example: restrict orders to USER and ADMIN roles
                         .pathMatchers("/payments/**").hasRole("ADMIN")
                         .pathMatchers("/restaurants/**").hasAnyRole("CUSTOMER", "ADMIN")
