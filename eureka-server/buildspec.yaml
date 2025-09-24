@@ -34,4 +34,4 @@ phases:
 artifacts:
   files:
     - imagedefinitions.json
-    - target/eureka-server*.jar
+    - eureka-server/target/eureka-server*.jar
